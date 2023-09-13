@@ -1,0 +1,22 @@
+.noteCard {
+    text-align: center;
+    padding-right: 10px;
+}
+
+.Card {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0rem 0rem 2rem 2rem;
+  }
+  
+
+
+
+.DetailView{
+    text-align: center;
+}
+
+.DetailButtons{
+    justify-content: space-between;
+}
+

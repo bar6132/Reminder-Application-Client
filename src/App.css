@@ -1,0 +1,12 @@
+.App {
+    text-align: center;
+
+}
+
+.App h1{
+    color :red;
+}
+
+.App p{
+    font-size: large;
+}
