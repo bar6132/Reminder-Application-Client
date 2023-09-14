@@ -8,9 +8,13 @@ import "./MyNavbar.css";
 import { FaCalendarPlus } from "react-icons/fa6";
 import Tooltip from "react-bootstrap/Tooltip";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import Form from 'react-bootstrap/Form';
+import { AppContext } from "./App";
+
 
 function MyNavbar() {
+  const { noteData, url } = useContext(AppContext);
   const [showTooltip, setShowTooltip] = useState(false);
   const handleMouseEnter = () => {
     setShowTooltip(true);
@@ -47,6 +51,15 @@ function MyNavbar() {
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
+          <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Search Note"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-success">Search</Button>
+          </Form>
             <Nav className="justify-content-end flex-grow-1 pe-1">
               <NavLink to="/" className="ll">
                 Home

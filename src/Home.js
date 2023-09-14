@@ -129,7 +129,7 @@ function Home() {
 
       <div className="Card">
       {noteData &&
-        noteData.data.map((item) => (
+        noteData.data.reverse().slice(-5).map((item) => (
           <Card key={item.id} style={{ width: "18rem" }}>
             <Card.Body className="noteCard">
               <Card.Title className="noteTitle">{item.title}</Card.Title>
